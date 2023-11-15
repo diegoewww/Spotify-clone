@@ -1,0 +1,30 @@
+---
+import type { Song } from '@/lib/data';
+interface Props {
+  song: Song;
+}
+const { song } = Astro.props;
+const { id, title, image, artists, album, duration } = song;
+---
+
+<div class="flex flex-row px-2 justify-between pt-9">
+  <span class="text-white text-lg pl-20">
+    {id}
+  </span>
+  <span class="text-white text-lg">
+    {title}
+  </span>
+  <span class="text-white text-lg">
+    {album}
+  </span>
+  <span class="text-white text-lg pr-20">
+    {duration}
+  </span>
+</div>
+
+<style>
+  td {
+    padding: 0.5rem;
+    text-align: center;
+  }
+</style>
